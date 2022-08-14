@@ -28,7 +28,7 @@ export const setupTheme = () => {
         palette: {
             primary: {
                 main: themeColors.primary,
-                contrastText: themeColors.generalContrastText
+                contrastText: themeColors.generalContrastText,
             },
             secondary: {
                 main: themeColors.secondary,
@@ -39,24 +39,30 @@ export const setupTheme = () => {
             },
         },
         typography: {
-            fontFamily: ['"Open Sans"', 'sans-serif'].join(','),
+            fontFamily: ['"Roboto"', 'sans-serif'].join(','),
             h1: {
                 fontWeight: 'bold',
+                color: themeColors.primary
             },
             h2: {
                 fontWeight: 'bold',
+                color: themeColors.primary
             },
             h3: {
                 fontWeight: 'bold',
+                color: themeColors.primary
             },
             h4: {
                 fontWeight: 'bold',
+                color: themeColors.primary
             },
             h5: {
                 fontWeight: 'bold',
+                color: themeColors.primary
             },
             h6: {
                 fontWeight: 'bold',
+                color: themeColors.primary
             }
         },
     });

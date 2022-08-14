@@ -43,7 +43,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M128.742,671.826c0,6.628-5.373,12.001-12.001,12.001l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M128.742,671.826c0,6.628-5.373,12.001-12.001,12.001l0,0
 		c-6.628,0-12.001-5.373-12.001-12.001V347.794c0-6.628,5.373-12.001,12.001-12.001l0,0c6.628,0,12.001,5.373,12.001,12.001V671.826
 		z">
 
@@ -126,7 +126,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M1682.897,1053.912c0,6.116-5.373,11.074-12.001,11.074l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M1682.897,1053.912c0,6.116-5.373,11.074-12.001,11.074l0,0
 		c-6.628,0-12.001-4.958-12.001-11.074V754.908c0-6.116,5.373-11.074,12.001-11.074l0,0c6.628,0,12.001,4.958,12.001,11.074
 		V1053.912z">
 
@@ -138,7 +138,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M1075.337,1192.12c0,9.256-3.358,16.76-7.501,16.76l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M1075.337,1192.12c0,9.256-3.358,16.76-7.501,16.76l0,0
 		c-4.143,0-7.501-7.504-7.501-16.76V739.592c0-9.256,3.358-16.76,7.501-16.76l0,0c4.142,0,7.501,7.504,7.501,16.76V1192.12z">
 
 		<animateTransform attributeName="transform"
@@ -171,7 +171,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M833.062,752.815c0,4.05-2.351,7.333-5.251,7.333l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M833.062,752.815c0,4.05-2.351,7.333-5.251,7.333l0,0
 		c-2.9,0-5.251-3.283-5.251-7.333V554.834c0-4.05,2.351-7.333,5.251-7.333l0,0c2.9,0,5.251,3.283,5.251,7.333V752.815z">
 
 		<animateTransform attributeName="transform"
@@ -193,7 +193,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M219.501,1127.872c0,6.628-3.694,12.001-8.251,12.001l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M219.501,1127.872c0,6.628-3.694,12.001-8.251,12.001l0,0
 		c-4.557,0-8.251-5.373-8.251-12.001V803.84c0-6.628,3.694-12.001,8.251-12.001l0,0c4.557,0,8.251,5.373,8.251,12.001V1127.872z">
 
 		<animateTransform attributeName="transform"
@@ -226,7 +226,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M492.528,614.821c0,6.628-3.694,12.001-8.251,12.001l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M492.528,614.821c0,6.628-3.694,12.001-8.251,12.001l0,0
 		c-4.557,0-8.251-5.373-8.251-12.001V290.788c0-6.628,3.694-12.001,8.251-12.001l0,0c4.557,0,8.251,5.373,8.251,12.001V614.821z">
 
 		<animateTransform attributeName="transform"
@@ -237,7 +237,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M567.536,148.015c0,4.285-3.694,7.759-8.251,7.759l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M567.536,148.015c0,4.285-3.694,7.759-8.251,7.759l0,0
 		c-4.557,0-8.251-3.474-8.251-7.759V-61.488c0-4.285,3.694-7.759,8.251-7.759l0,0c4.557,0,8.251,3.474,8.251,7.759V148.015z">
 
 		<animateTransform attributeName="transform"
@@ -281,7 +281,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M1426.708,255.509c0,6.228-4.18,11.277-9.337,11.277l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M1426.708,255.509c0,6.228-4.18,11.277-9.337,11.277l0,0
 		c-5.157,0-9.337-5.049-9.337-11.277V-48.97c0-6.228,4.18-11.277,9.337-11.277l0,0c5.157,0,9.337,5.049,9.337,11.277V255.509z">
 
 		<animateTransform attributeName="transform"
@@ -314,7 +314,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M1751.723,201.814c0,6.057-4.62,10.967-10.32,10.967l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M1751.723,201.814c0,6.057-4.62,10.967-10.32,10.967l0,0
 		c-5.7,0-10.32-4.91-10.32-10.967V-94.285c0-6.057,4.62-10.967,10.32-10.967l0,0c5.7,0,10.32,4.91,10.32,10.967V201.814z">
 
 		<animateTransform attributeName="transform"
@@ -336,7 +336,7 @@
                           repeatCount="indefinite"/>
 	</path>
 
-	<path fill="#66FCF1" stroke="#000000" stroke-miterlimit="10" d="M1607.981,408.834c0,6.057-4.62,10.967-10.32,10.967l0,0
+	<path fill="#467fb7" stroke="#000000" stroke-miterlimit="10" d="M1607.981,408.834c0,6.057-4.62,10.967-10.32,10.967l0,0
 		c-5.7,0-10.32-4.91-10.32-10.967V112.736c0-6.057,4.62-10.967,10.32-10.967l0,0c5.7,0,10.32,4.91,10.32,10.967V408.834z">
 
 		<animateTransform attributeName="transform"
