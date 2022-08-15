@@ -54,6 +54,13 @@ export const welcomeComponent = makeStyles((theme: Theme) => ({
         borderRadius: "50%",
         marginTop: theme.spacing(17.5),
         border: "10px solid white",
+    },
+    social: {
+        marginTop: 10,
+    },
+    socialImage: {
+        height: 50,
+        marginLeft: theme.spacing(2)
     }
 }));
 
