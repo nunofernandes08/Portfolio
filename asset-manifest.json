@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.8d03060a.css",
+    "main.js": "/Portfolio/static/js/main.d262e4b1.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/acdc.mp3": "/Portfolio/static/media/acdc.65bb5579cea40934e03b.mp3",
+    "static/media/tropper.mp3": "/Portfolio/static/media/tropper.52c9e517023ee19be386.mp3",
+    "static/media/nuno-square.jpg": "/Portfolio/static/media/nuno-square.67fca29eaab3b1973603.jpg",
+    "static/media/email.png": "/Portfolio/static/media/email.c5e388f85cf2eebe7130.png",
+    "static/media/github.png": "/Portfolio/static/media/github.0e74f17c4b316875f5d3.png",
+    "static/media/twitter.png": "/Portfolio/static/media/twitter.93ac3f9a344ecd5d01a4.png",
+    "static/media/linkedin.png": "/Portfolio/static/media/linkedin.17e919bb623c20be8b80.png",
+    "static/media/splashBlue.svg": "/Portfolio/static/media/splashBlue.f6e4b9a754a4785b4eab5ace1497f814.svg",
+    "static/media/splashRed.svg": "/Portfolio/static/media/splashRed.501b7bb47f925bf60fddcdf6886d905c.svg",
+    "index.html": "/Portfolio/index.html",
+    "main.8d03060a.css.map": "/Portfolio/static/css/main.8d03060a.css.map",
+    "main.d262e4b1.js.map": "/Portfolio/static/js/main.d262e4b1.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d03060a.css",
+    "static/js/main.d262e4b1.js"
+  ]
+}
