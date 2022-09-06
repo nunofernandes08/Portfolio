@@ -16,10 +16,7 @@ export const selectTheme = (theme: string, dataToReturn: ThemeInterface) => {
 
 export function navigate(endpoint: string) {
     const location = `${endpoint}`
-
-    window.location.href = (location || "").startsWith("/")
-        ? location
-        : `/${location}`
+    window.location.href = `/${location}`
 }
 
 export const truncateString = (s: string, len = 38) => {
