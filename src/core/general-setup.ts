@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 import { createTheme } from "@mui/material/styles";
 
 import translationPT from '../translations/pt.json';
-import { themeColors } from "../style/common";
+import { themeColorsLight, themeColorsDark, themeColorsLightRed } from "../style/common";
 
 export const setupI18n = () => {
     i18n
@@ -23,46 +23,145 @@ export const setupI18n = () => {
         });
 }
 
-export const setupTheme = () => {
+export const setupThemeLight = () => {
     return createTheme({
         palette: {
             primary: {
-                main: themeColors.primary,
-                contrastText: themeColors.generalContrastText,
+                main: themeColorsLight.primary,
+                contrastText: themeColorsLight.generalContrastText,
             },
             secondary: {
-                main: themeColors.secondary,
+                main: themeColorsLight.secondary,
             },
-            divider: themeColors.background,
+            divider: themeColorsLight.background,
             background: {
-                default: themeColors.background
+                default: themeColorsLight.background
             },
         },
         typography: {
-            fontFamily: ['"Roboto"', 'sans-serif'].join(','),
+            fontFamily: "var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif))",
             h1: {
                 fontWeight: 'bold',
-                color: themeColors.primary
+                color: themeColorsLight.primary
             },
             h2: {
                 fontWeight: 'bold',
-                color: themeColors.primary
+                color: themeColorsLight.primary
             },
             h3: {
                 fontWeight: 'bold',
-                color: themeColors.primary
+                color: themeColorsLight.primary
             },
             h4: {
                 fontWeight: 'bold',
-                color: themeColors.primary
+                color: themeColorsLight.primary
             },
             h5: {
                 fontWeight: 'bold',
-                color: themeColors.primary
+                color: themeColorsLight.primary
             },
             h6: {
                 fontWeight: 'bold',
-                color: themeColors.primary
+                color: themeColorsLight.primary
+            },
+            subtitle1: {
+                color: themeColorsLight.generalContrastText
+            }
+        },
+    });
+}
+
+export const setupThemeDark = () => {
+    return createTheme({
+        palette: {
+            primary: {
+                main: themeColorsDark.primary,
+                contrastText: themeColorsDark.generalContrastText,
+            },
+            secondary: {
+                main: themeColorsDark.secondary,
+            },
+            divider: themeColorsDark.background,
+            background: {
+                default: themeColorsDark.background
+            },
+        },
+        typography: {
+            fontFamily: "var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif))",
+            h1: {
+                fontWeight: 'bold',
+                color: themeColorsDark.primary
+            },
+            h2: {
+                fontWeight: 'bold',
+                color: themeColorsDark.primary
+            },
+            h3: {
+                fontWeight: 'bold',
+                color: themeColorsDark.primary
+            },
+            h4: {
+                fontWeight: 'bold',
+                color: themeColorsDark.primary
+            },
+            h5: {
+                fontWeight: 'bold',
+                color: themeColorsDark.primary
+            },
+            h6: {
+                fontWeight: 'bold',
+                color: themeColorsDark.primary
+            },
+            subtitle1: {
+                color: themeColorsDark.generalContrastText
+            }
+        },
+    });
+}
+
+export const setupThemeLightRed = () => {
+    return createTheme({
+        palette: {
+            primary: {
+                main: themeColorsLightRed.primary,
+                contrastText: themeColorsLightRed.generalContrastText,
+            },
+            secondary: {
+                main: themeColorsLightRed.secondary,
+            },
+            divider: themeColorsLightRed.background,
+            background: {
+                default: themeColorsLightRed.background
+            },
+        },
+        typography: {
+            fontFamily: "var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif))",
+            h1: {
+                fontWeight: 'bold',
+                color: themeColorsLightRed.primary
+            },
+            h2: {
+                fontWeight: 'bold',
+                color: themeColorsLightRed.primary
+            },
+            h3: {
+                fontWeight: 'bold',
+                color: themeColorsLightRed.primary
+            },
+            h4: {
+                fontWeight: 'bold',
+                color: themeColorsLightRed.primary
+            },
+            h5: {
+                fontWeight: 'bold',
+                color: themeColorsLightRed.primary
+            },
+            h6: {
+                fontWeight: 'bold',
+                color: themeColorsLightRed.primary
+            },
+            subtitle1: {
+                color: themeColorsLightRed.generalContrastText
             }
         },
     });

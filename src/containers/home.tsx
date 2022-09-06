@@ -1,41 +1,24 @@
-import React, { useEffect, useState } from "react";
-import Lottie from "react-lottie";
+import React from "react";
 
 import { Box } from "@mui/material";
 
-import Welcome from "../components/welcome";
-import AboutMe from "../components/about-me";
+import Welcome from "../components/home/welcome";
+import AboutMe from "../components/home/about-me";
+import Projects from "../components/home/projects";
 
-import * as robot from "../assets/robot.json";
+const componentsWithMargins = [AboutMe, Projects]
 
-export default function Home() {
-  const [showBot, setShowBot] = useState(true);
-
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: robot,
-    name: "robot",
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setShowBot(false);
-    }, 5000);
-  }, []);
-
+export default function Home(props: { theme: string }) {
   return (
-    <>
-      <Welcome />
-      <Box style={{ marginTop: 140 }}>
-        <AboutMe />
-      </Box>
-
-      {showBot && (
-        <Box style={{ position: "fixed", bottom: 20, right: 0 }}>
-          <Lottie options={defaultOptions} height={200} width={200} />
-        </Box>
-      )}
-    </>
+    <React.Fragment>
+      <Welcome theme={props.theme} />
+      {componentsWithMargins.map((Component, index) => {
+        return (
+          <Box style={{ marginTop: 140, marginLeft: 300, marginRight: 300, maxWidth: 1321 }} key={index}>
+            <Component theme={props.theme} />
+          </Box>
+        )
+      })}
+    </React.Fragment>
   );
 }
