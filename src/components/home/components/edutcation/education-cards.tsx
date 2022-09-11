@@ -3,7 +3,7 @@ import Lottie from "react-lottie";
 
 import { Box, Chip, Typography } from "@mui/material";
 
-import * as arrowRight from "../../../../assets/arrowRight.json";
+import * as arrowRight from "../../../../assets/education/arrowRight.json";
 
 export default function EducationCard(props: { school: string, location: string, period: string, text: string, index: number, lastIndex: number }) {
     const defaultOptionsRight = {

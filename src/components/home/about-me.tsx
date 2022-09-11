@@ -5,7 +5,7 @@ import { Box, Grid, Typography } from "@mui/material";
 
 import { useCommonStyles } from "../../style/common";
 
-import * as me from "../../assets/me.json";
+import * as me from "../../assets/about-me/me.json";
 import GeneralBox from "./components/general-box";
 
 export default function AboutMe() {

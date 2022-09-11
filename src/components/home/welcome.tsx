@@ -2,15 +2,15 @@ import React from "react";
 
 import { Box, Typography } from "@mui/material";
 
-import profileImage from "../../assets/nuno-square.jpg";
-import email from "../../assets/social/email.png";
-import twitter from "../../assets/social/twitter.png";
-import github from "../../assets/social/github.png";
-import linkedin from "../../assets/social/linkedin.png";
+import profileImage from "../../assets/welcome/nuno-square.jpg";
+import email from "../../assets/welcome/social/email.png";
+import twitter from "../../assets/welcome/social/twitter.png";
+import github from "../../assets/welcome/social/github.png";
+import linkedin from "../../assets/welcome/social/linkedin.png";
 
 import { themeColors, welcomeComponent } from "../../style/common";
 
-import backgroundAnimatedBlue from "../../assets/splashBlue.svg";
+import backgroundAnimatedBlue from "../../assets/welcome/splashBlue.svg";
 
 const socialImages = [
   { image: email, link: "https://www.hotmail.com/" },
