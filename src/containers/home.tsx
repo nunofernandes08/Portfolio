@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <Welcome />
-      <Box style={{ marginTop: 140, marginBottom: 140, marginLeft: 200, marginRight: 200, maxWidth: 1321 }} >
+      <Box style={{ marginTop: 140, marginBottom: 140, marginLeft: 300, marginRight: 200, maxWidth: 1321 }} >
         {componentsWithMargins.map((Component, index) => {
           return (
             <Box key={index} sx={{ pt: componentPaddingTop(index), pb: componentPaddingBottom(index) }}>

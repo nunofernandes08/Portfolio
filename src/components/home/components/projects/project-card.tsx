@@ -46,12 +46,12 @@ export default function ProjectCard(props: { img: string, title: string, descrip
     };
 
     return (
-        <Box className="card">
+        <Box className="card" onClick={() => navigate(`/${props.src}`)}>
             <Box className="content">
                 <Box display="flex" alignItems="center" justifyContent=" center" flexDirection="column" className="front" style={{ background: `url(${props.img})`, backgroundSize: "auto", backgroundRepeat: "no-repeat" }}>
                     <Lottie options={defaultOptions} width={250} height={250} style={{ margin: 0 }} />
                 </Box>
-                <Box className="back" onClick={() => navigate(`/${props.src}`)}>
+                <Box className="back">
                     <Box style={{ background: `url(${props.img})`, backgroundSize: "auto", backgroundRepeat: "no-repeat", borderRadius: "6px 6px 0px 0px" }}>
                         <Lottie options={defaultOptions} width={300} height={130} style={{ margin: 0 }} />
                     </Box>

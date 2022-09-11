@@ -1,6 +1,7 @@
 .card {
     width: 300px;
     min-height: 300px;
+    cursor: pointer;
 }
 
 .content {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import {
-  BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
+  useLocation
 } from "react-router-dom";
 import Lottie from "react-lottie";
 
@@ -33,7 +33,8 @@ const theme = setupTheme();
 
 export default function App() {
   const [showBot, setShowBot] = useState(true);
-  const [currentPath, setCurrentPath] = useState(window.location.pathname)
+  const location = useLocation();
+  const currentPath = location.pathname
 
   const defaultOptions = {
     loop: true,
@@ -43,41 +44,31 @@ export default function App() {
   };
 
   useEffect(() => {
-    window.addEventListener("popstate", () => {
-      setCurrentPath(window.location.pathname)
-    });
-    return () => window.removeEventListener("popstate", () => {
-      setCurrentPath(window.location.pathname)
-    })
-  }, [])
-
-  useEffect(() => {
     setTimeout(() => {
       setShowBot(false);
     }, 5000);
   }, []);
 
+
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
-        <Router>
-          <Box
-            style={{
-              background: currentPath === Paths.SPOTIFY ? '#121212' : themeColors.background,
-            }}
-          >
-            <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/spotify" element={<Spotify />} />
-              <Route path="*" element={<Navigate to="/home" replace />} />
-            </Routes>
+        <Box
+          style={{
+            background: currentPath === Paths.SPOTIFY ? '#121212' : themeColors.background,
+          }}
+        >
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/spotify" element={<Spotify />} />
+            <Route path="*" element={<Navigate to="/home" replace />} />
+          </Routes>
+        </Box>
+        {showBot && currentPath !== Paths.SPOTIFY && (
+          <Box style={{ position: "fixed", bottom: 20, right: 0 }}>
+            <Lottie options={defaultOptions} height={200} width={200} />
           </Box>
-          {showBot && currentPath !== Paths.SPOTIFY && (
-            <Box style={{ position: "fixed", bottom: 20, right: 0 }}>
-              <Lottie options={defaultOptions} height={200} width={200} />
-            </Box>
-          )}
-        </Router>
+        )}
       </ThemeProvider>
     </StyledEngineProvider>
   );
