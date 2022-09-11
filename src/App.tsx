@@ -54,6 +54,10 @@ export default function App() {
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
           style={{
             background: currentPath === Paths.SPOTIFY ? '#121212' : themeColors.background,
           }}
