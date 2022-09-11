@@ -33,7 +33,7 @@ const theme = setupTheme();
 
 export default function App() {
   const [showBot, setShowBot] = useState(true);
-  const currentPath = window.location.pathname
+  const [currentPath, setCurrentPath] = useState(window.location.pathname)
 
   const defaultOptions = {
     loop: true,
@@ -41,6 +41,15 @@ export default function App() {
     animationData: robot,
     name: "robot",
   };
+
+  useEffect(() => {
+    window.addEventListener("popstate", () => {
+      setCurrentPath(window.location.pathname)
+    });
+    return () => window.removeEventListener("popstate", () => {
+      setCurrentPath(window.location.pathname)
+    })
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {
