@@ -1,21 +1,5 @@
-
-import { ThemeInterface, Themes } from "../types";
-
-export const selectTheme = (theme: string, dataToReturn: ThemeInterface) => {
-    switch (theme) {
-        case Themes.LIGHT:
-            return dataToReturn.themeLight;
-        case Themes.DARK:
-            return dataToReturn.themeDark;
-        case Themes.LIGHTRED:
-            return dataToReturn.themeLightRed;
-        default:
-            return dataToReturn.themeLight;
-    }
-};
-
-export function navigate(endpoint: string) {
-    const location = `${endpoint}`
+export function navigate(path: string) {
+    const location = `${path}`
     window.location.href = `/${location}`
 }
 
@@ -60,4 +44,13 @@ export const timeFormat = (date: Date) => {
 
 export const goToSpotify = () => {
     return window.open('https://open.spotify.com/', '_blank')
+}
+
+export const slideFormat = (diff: any, isPaused: boolean, music: any) => {
+    if (!diff || isPaused) return 0
+
+    const musicTotal = parseInt(music.total.replaceAll(":", "").substring(3, 6))
+    const timer = parseInt(diff.toLocaleTimeString().replaceAll(":", "").substring(3, 6)) as number
+
+    return (timer / musicTotal) * 100
 }

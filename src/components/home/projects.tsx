@@ -1,8 +1,9 @@
 import React from "react";
 
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
-import ProjectCard from "./components/project-card";
+import GeneralBox from "./components/general-box";
+import ProjectCard from "./components/projects/project-card";
 
 const projects = [{
     img: "https://ishoppingstar.com/wp-content/uploads/2022/03/60c27838dcd6e.jpg",
@@ -25,16 +26,14 @@ const projects = [{
     logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Amazon_icon.svg/2500px-Amazon_icon.svg.png"
 }]
 
-export default function Projects(props: { theme: string }) {
+export default function Projects() {
     return (
-        <Box>
-            <Typography variant="h3">Projects</Typography>
-
-            <Box display="flex" flexWrap="wrap" justifyContent="space-between" sx={{ pt: 3 }} style={{ maxWidth: 1305 }}>
+        <GeneralBox title="Projects">
+            <Box display="flex" flexWrap="wrap" justifyContent="space-between">
                 {projects.map((project, index) => (
                     <ProjectCard key={index} img={project.img} title={project.title} description={project.description} src={project.src} logo={project.logo} />
                 ))}
             </Box>
-        </Box >
+        </GeneralBox>
     );
 }

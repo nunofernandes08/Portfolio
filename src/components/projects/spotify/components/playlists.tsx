@@ -4,8 +4,9 @@ import { Box, Typography } from "@mui/material";
 
 import PlaylistCard from "./playlist-card";
 
-import acdc from "../../../assets/audios/acdc.mp3"
-import tropper from "../../../assets/audios/tropper.mp3"
+import acdc from "../../../../assets/audios/acdc.mp3"
+import tropper from "../../../../assets/audios/tropper.mp3"
+import { themeColorsSpotify } from "../../../../style/common";
 
 const firstContainerPlaylistCards = [{
     img: "https://i.scdn.co/image/ab67706f00000002e2669fb73bbf182adac393cf",
@@ -114,7 +115,7 @@ export default function Playlists(props: { playMusic: Function }) {
         <Box style={{ padding: 20, paddingLeft: 32, paddingRight: 32 }}>
             {containers.map((container, containerIndex) => (
                 <Box sx={{ mt: containerIndex !== 0 ? 4 : 0 }} key={containerIndex}>
-                    <Typography variant="h5" style={{ color: "white", fontSize: 22 }}>{container.title}</Typography>
+                    <Typography variant="h5" style={{ color: themeColorsSpotify.whiteColor, fontSize: 22 }}>{container.title}</Typography>
 
                     <Box display="flex" flexWrap="wrap" sx={{ mt: 3 }}>
                         {container.musics.map((musics, musicIndex) => (

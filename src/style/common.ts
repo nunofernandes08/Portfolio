@@ -1,28 +1,24 @@
 import { makeStyles } from "@mui/styles"
 import { Theme } from '@mui/material/styles';
 
-export const themeColorsLight = {
-    primary: '#467fb7',
-    primaryDark: '#45A29E',
-    secondary: '#1F2833',
+export const themeColors = {
+    primary: '#022C43',
+    primaryLight: '#053F5E',
+    primaryEvenLighter: '#115173',
+    secondary: '#FFD700',
     generalContrastText: '#000',
-    background: 'linear-gradient(#8BC6EC 0%, #9599E2 100%)'
+    background: '#fff',
 }
 
-export const themeColorsDark = {
-    primary: '#467fb7',
-    primaryDark: '#45A29E',
-    secondary: '#1F2833',
-    generalContrastText: '#fff',
-    background: 'linear-gradient(hwb(0deg 30% 70%) 0%, hwb(0deg 30% 70%) 100%)'
-}
-
-export const themeColorsLightRed = {
-    primary: '#b74646',
-    primaryDark: '#a24545',
-    secondary: '#1F2833',
-    generalContrastText: '#000',
-    background: 'linear-gradient(#8BC6EC 0%, #9599E2 100%)'
+export const themeColorsSpotify = {
+    primary: '#1ed760',
+    whiteColor: '#fff',
+    blackColor: '#000',
+    grayColor: '#b3b3b3',
+    veryDarkGrayColor: '#181818',
+    veryDarkGrayLight: '#282828',
+    veryDarkGrayDarkerColor: 'rgba(0,0,0,0.87)',
+    sideBarLikeBottom: 'linear-gradient(135deg,#450af5,#c4efd9)'
 }
 
 export const useCommonStyles = makeStyles((theme: Theme) => ({
@@ -55,30 +51,127 @@ export const welcomeComponent = makeStyles((theme: Theme) => ({
         width: "100%",
         height: theme.spacing(37.5),
         position: "relative",
-        marginBottom: theme.spacing(25)
+        marginBottom: 213
     },
     profileImage: {
-        height: theme.spacing(37.5),
-        width: theme.spacing(37.5),
+        height: 230,
+        width: 230,
         borderRadius: "50%",
-        marginTop: theme.spacing(17.5),
+        marginTop: 170,
         border: "10px solid",
     },
     social: {
         marginTop: 10,
     },
     socialImage: {
-        height: 50,
+        height: 40,
         marginLeft: theme.spacing(2)
     }
 }));
 
-export const musicCards = makeStyles((theme: Theme) => ({
-    box: {
-        borderRadius: 10,
-        backgroundColor: '#ffffff3d'
+export const spotifyComponents = makeStyles((theme: Theme) => ({
+    spotifyNavbarContainer: {
+        backgroundColor: themeColorsSpotify.veryDarkGrayColor,
     },
-    slider: {
+    spotifyNavbarButtonArrow: {
+        minWidth: 32,
+        height: 32,
+        backgroundColor: themeColorsSpotify.veryDarkGrayDarkerColor,
+        padding: 0,
+        borderRadius: "50%"
+    },
+    spotifyNavbarButtonArrowBackNext: {
+        width: 22,
+        height: 22,
+        fill: themeColorsSpotify.whiteColor
+    },
+    spotifyNavbarSignUp: {
+        color: themeColorsSpotify.grayColor,
+        fontSize: 16,
+        textTransform: "none",
+        fontWeight: 700,
+        "&:hover": {
+            backgroundColor: themeColorsSpotify.veryDarkGrayColor
+        },
+    },
+    spotifyNavbarLogin: {
+        width: 110,
+        height: 48,
+        borderRadius: 25,
+        fontSize: 16,
+        textTransform: "none",
+        fontWeight: 700,
+        backgroundColor: themeColorsSpotify.whiteColor,
+        "&:hover": {
+            backgroundColor: themeColorsSpotify.whiteColor
+        },
+    },
+    spotifyPlaylistCardContainer: {
+        width: 146.8,
+        height: 243.8,
+        backgroundColor: themeColorsSpotify.veryDarkGrayColor,
+        padding: 16,
+        borderRadius: 6,
+        transition: "0.3s",
+        cursor: "pointer",
+        "&:hover": {
+            backgroundColor: themeColorsSpotify.veryDarkGrayLight,
+        },
+    },
+    spotifyPlaylistCardImg: {
+        position: 'relative',
+        width: 147.8,
+        height: 147.8,
+        marginBottom: 16
+    },
+    spotifyPlaylistCardIconButton: {
+        position: 'absolute',
+        bottom: 10,
+        right: 10,
+        width: 50,
+        height: 50,
+        backgroundColor: themeColorsSpotify.primary,
+        "&:hover": {
+            width: 51,
+            height: 51,
+            backgroundColor: themeColorsSpotify.primary,
+        },
+    },
+    spotifyPlaylistCardTitle: {
+        fontSize: "1rem",
+        fontWeight: 700,
+        color: themeColorsSpotify.whiteColor,
+        paddingBlockEnd: 4
+    },
+    spotifyPlaylistCardDescription: {
+        color: themeColorsSpotify.grayColor
+    },
+    spotifySideBarDrawer: {
+        width: 241,
+        height: "calc(100% - 90px)",
+        flexShrink: 0,
+        "& .MuiDrawer-paper": {
+            width: 241,
+            height: "calc(100% - 90px)",
+            boxSizing: "border-box",
+            backgroundColor: themeColorsSpotify.blackColor,
+            border: 0
+        },
+    },
+    spotifySideBarListItemText: {
+        "& .MuiTypography-root": {
+            fontSize: "0.875rem",
+            fontWeight: 700
+        }
+    },
+    spotifySideBarBottomText: {
+        fontSize: "0.6875rem",
+        fontWeight: 400,
+        color: themeColorsSpotify.whiteColor,
+        height: 25.59,
+        cursor: "pointer"
+    },
+    spotifyPlayerSlider: {
         '& .MuiSlider-track': {
             border: 'none',
             backgroundColor: "white"
@@ -95,128 +188,4 @@ export const musicCards = makeStyles((theme: Theme) => ({
             },
         },
     }
-}))
-
-export const sideBar = makeStyles((theme: Theme) => ({
-    drawer: {
-        width: 241,
-        height: "calc(100% - 90px)",
-        backgroundColor: "red",
-        flexShrink: 0,
-        "& .MuiDrawer-paper": {
-            width: 241,
-            height: "calc(100% - 90px)",
-            boxSizing: "border-box",
-            backgroundColor: "#000"
-        },
-    },
-    listItemText: {
-        "& .MuiTypography-root": {
-            fontSize: "0.875rem",
-            fontWeight: 700
-        }
-    },
-    bottomText: {
-        fontSize: "0.6875rem",
-        fontWeight: 400,
-        color: "white",
-        height: 25.59,
-        cursor: "pointer"
-    }
-}))
-
-export const homeComponentsStyle = makeStyles((theme: Theme) => ({
-    projectCardContainer: {
-        width: 300,
-        height: 300,
-        perspective: 500,
-        backgroundColor: "white",
-        borderRadius: "9px 9px 8px 8px",
-        cursor: "pointer",
-    },
-    projectCardImg: {
-        width: 300,
-        height: 130,
-        objectFit: "cover",
-        borderRadius: "8px 8px 0px 0px"
-    },
-    projectCardLogo: {
-        width: 130,
-        height: 130,
-        borderRadius: 20
-    }
-}));
-
-export const spotifyComponents = makeStyles((theme: Theme) => ({
-    spotifyNavbarContainer: {
-        backgroundColor: "#0b0b0b",
-    },
-    spotifyNavbarButtonArrow: {
-        minWidth: 32,
-        height: 32,
-        backgroundColor: "rgba(0,0,0,.7)",
-        padding: 0,
-        borderRadius: "50%"
-    },
-    spotifyNavbarButtonArrowBackNext: {
-        width: 22,
-        height: 22,
-        fill: "#fff"
-    },
-    spotifyNavbarSignUp: {
-        color: "#A7A7A7",
-        fontSize: 16,
-        textTransform: "none",
-        fontWeight: 700
-    },
-    spotifyNavbarLogin: {
-        width: 110,
-        height: 48,
-        borderRadius: 25,
-        fontSize: 16,
-        textTransform: "none",
-        fontWeight: 700,
-        backgroundColor: "#fff"
-    },
-
-    spotifyPlaylistCardContainer: {
-        width: 146.8,
-        height: 243.8,
-        backgroundColor: '#181818',
-        padding: 16,
-        borderRadius: 6,
-        transition: "0.3s",
-        cursor: "pointer",
-        "&:hover": {
-            backgroundColor: "#282828",
-        },
-    },
-    spotifyPlaylistCardImg: {
-        position: 'relative',
-        width: 147.8,
-        height: 147.8,
-        marginBottom: 16
-    },
-    spotifyPlaylistCardIconButton: {
-        position: 'absolute',
-        bottom: 10,
-        right: 10,
-        width: 50,
-        height: 50,
-        backgroundColor: "#1ed760",
-        "&:hover": {
-            width: 51,
-            height: 51,
-            backgroundColor: "#1ed760",
-        },
-    },
-    spotifyPlaylistCardTitle: {
-        fontSize: "1rem",
-        fontWeight: 700,
-        color: "white",
-        paddingBlockEnd: 4
-    },
-    spotifyPlaylistCardDescription: {
-        color: "#a7a7a7"
-    },
 }));

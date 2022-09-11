@@ -4,8 +4,8 @@ import { Box, Button, Drawer, Grid, List, ListItem, ListItemButton, ListItemIcon
 import AddIcon from '@mui/icons-material/Add';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-import { sideBar } from "../../style/common";
-import { goToSpotify } from "../../services/utils";
+import { spotifyComponents, themeColorsSpotify } from "../../../style/common";
+import { goToSpotify } from "../../../services/utils";
 
 const listItems = [{
     text: "Home",
@@ -20,7 +20,7 @@ const listItems = [{
 
 const CreatePlaylistButton = () => {
     return (
-        <Button variant="contained" sx={{ padding: 0, background: "rgba(255, 255, 255, 0.7)" }} style={{ padding: 4, minWidth: 24, height: 24, width: 24, borderRadius: 2 }}>
+        <Button variant="contained" sx={{ padding: 0, background: themeColorsSpotify.grayColor }} style={{ padding: 4, minWidth: 24, height: 24, width: 24, borderRadius: 2 }}>
             <AddIcon style={{ width: 18, height: 18 }} />
         </Button>
     )
@@ -28,19 +28,19 @@ const CreatePlaylistButton = () => {
 
 const LikeSongsButton = () => {
     return (
-        <Button variant="contained" sx={{ padding: 0, background: "linear-gradient(135deg,#450af5,#c4efd9)" }} style={{ padding: 4, minWidth: 24, height: 24, width: 24, borderRadius: 2 }}>
-            <FavoriteIcon style={{ width: 14, height: 14, fill: "#fff" }} />
+        <Button variant="contained" sx={{ padding: 0, background: themeColorsSpotify.sideBarLikeBottom }} style={{ padding: 4, minWidth: 24, height: 24, width: 24, borderRadius: 2 }}>
+            <FavoriteIcon style={{ width: 14, height: 14, fill: themeColorsSpotify.whiteColor }} />
         </Button>
     )
 }
 
 export default function SideBar() {
-    const sideBarClass = sideBar()
+    const sideBarClass = spotifyComponents()
 
     return (
         <Box sx={{ display: "flex" }}>
             <Drawer
-                className={sideBarClass.drawer}
+                className={sideBarClass.spotifySideBarDrawer}
                 variant="permanent"
                 anchor="left"
             >
@@ -55,7 +55,7 @@ export default function SideBar() {
                                     <ListItem key={index} disablePadding sx={{ px: 1 }}>
                                         <ListItemButton sx={{ px: 2, py: 0, height: 40 }} onClick={() => goToSpotify()}>
                                             <ListItemIcon sx={{ minWidth: 0 }}>{item.icon}</ListItemIcon>
-                                            <ListItemText className={sideBarClass.listItemText} primary={item.text} sx={{ pl: 2, color: "white" }} />
+                                            <ListItemText className={sideBarClass.spotifySideBarListItemText} primary={item.text} sx={{ pl: 2, color: themeColorsSpotify.whiteColor }} />
                                         </ListItemButton>
                                     </ListItem>
                                 ))}
@@ -65,7 +65,7 @@ export default function SideBar() {
                                     <ListItem key={index} disablePadding sx={{ px: 1 }}>
                                         <ListItemButton sx={{ px: 2, py: 0, height: 40 }} onClick={() => goToSpotify()}>
                                             {index === 0 ? CreatePlaylistButton() : LikeSongsButton()}
-                                            <ListItemText className={sideBarClass.listItemText} primary={item} sx={{ pl: 2, color: "white" }} />
+                                            <ListItemText className={sideBarClass.spotifySideBarListItemText} primary={item} sx={{ pl: 2, color: themeColorsSpotify.whiteColor }} />
                                         </ListItemButton>
                                     </ListItem>
                                 ))}
@@ -73,8 +73,8 @@ export default function SideBar() {
                         </Box>
                         <Box display="flex" style={{ height: "50%" }} >
                             <Box display="flex" justifyContent="flex-end" alignItems="flex-start" flexDirection="column" sx={{ my: 3, px: 3, width: "100%" }}>
-                                <Typography variant="body1" className={sideBarClass.bottomText} onClick={() => goToSpotify()}>Cookies</Typography>
-                                <Typography variant="body1" className={sideBarClass.bottomText} onClick={() => goToSpotify()}>Privacy</Typography>
+                                <Typography variant="body1" className={sideBarClass.spotifySideBarBottomText} onClick={() => goToSpotify()}>Cookies</Typography>
+                                <Typography variant="body1" className={sideBarClass.spotifySideBarBottomText} onClick={() => goToSpotify()}>Privacy</Typography>
                             </Box>
                         </Box>
                     </Grid>

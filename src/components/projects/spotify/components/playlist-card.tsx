@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { Box, IconButton, Typography } from "@mui/material";
 import { PlayArrow } from "@mui/icons-material";
 
-import { spotifyComponents } from "../../../style/common";
+import { spotifyComponents } from "../../../../style/common";
 
-import { goToSpotify, truncateString } from "../../../services/utils";
+import { truncateString } from "../../../../services/utils";
 
 export default function PlaylistCard(props: { img: string, title: string, description: string, playMusic: Function, src: string }) {
     const styleClasses = spotifyComponents();

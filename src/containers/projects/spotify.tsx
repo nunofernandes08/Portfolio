@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Howl } from 'howler';
 
 import { Box, Stack, IconButton, Slider, Typography } from "@mui/material";
-import { useTheme } from '@mui/material/styles';
 
 import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
@@ -14,16 +13,15 @@ import VolumeDownIcon from '@mui/icons-material/VolumeDown';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 
-import Content from "../components/spotify/components/content";
-import SideBar from "../components/spotify/sidebar";
+import Content from "../../components/projects/spotify/components/content";
+import SideBar from "../../components/projects/spotify/sidebar";
 
-import { musicCards } from "../style/common";
+import { spotifyComponents, themeColorsSpotify } from "../../style/common";
 
-import { chooseMusic, timeFormat } from "../services/utils";
+import { chooseMusic, slideFormat, timeFormat } from "../../services/utils";
 
-export default function Spotify(props: { theme: string }) {
-    const theme = useTheme();
-    const card = musicCards()
+export default function Spotify() {
+    const styleClasses = spotifyComponents()
 
     const [isPaused, setIsPaused] = useState(true)
     const [isMuted, setIsMuted] = useState(false)
@@ -47,7 +45,7 @@ export default function Spotify(props: { theme: string }) {
             src: musicSrc,
             html5: true,
         }))
-        const withoutPaths = musicSrc.replace("/static/media/", "")
+        const withoutPaths = musicSrc.replace("/Portfolio/static/media/", "")
         const withoutFirst = withoutPaths.substring(0, musicSrc.indexOf("."))
         const musicId = withoutFirst.substring(0, withoutFirst.indexOf("."))
 
@@ -76,10 +74,10 @@ export default function Spotify(props: { theme: string }) {
         setLatestVolume(value)
     }
 
-    const seekMusic = (e: any) => {
-        const value = e.target.value
-        sound?.seek(value)
-    }
+    // const seekMusic = (e: any) => {
+    //     const value = e.target.value
+    //     sound?.seek(value)
+    // }
 
     const muteSound = () => {
         sound?.volume(0)
@@ -112,15 +110,6 @@ export default function Spotify(props: { theme: string }) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [diff])
 
-    const slideFormat = (diff: any, isPaused: boolean) => {
-        if (!diff || isPaused) return 0
-
-        const musicTotal = parseInt(music.total.replaceAll(":", "").substring(3, 6))
-        const timer = parseInt(diff.toLocaleTimeString().replaceAll(":", "").substring(3, 6)) as number
-
-        return (timer / musicTotal) * 100
-    }
-
     return (
         <React.Fragment>
             <Box display="flex">
@@ -130,18 +119,18 @@ export default function Spotify(props: { theme: string }) {
                 </Box>
             </Box>
 
-            <Box style={{ width: "100%", height: 90, background: "#181818", position: "sticky", bottom: 0 }}>
+            <Box style={{ width: "100%", height: 90, background: themeColorsSpotify.veryDarkGrayColor, position: "sticky", bottom: 0 }}>
                 <Box display="flex" alignItems="center" style={{ width: "100%", height: "100%" }}>
                     <Box display="flex" alignItems="center" style={{ width: "20%" }} sx={{ pl: 2 }}>
                         {music.artist && (
                             <>
                                 <img src={music.img} alt="" style={{ width: 56, height: 56 }} />
                                 <Box sx={{ pl: 2 }}>
-                                    <Typography variant="body1" style={{ color: "white" }}>{music.musicName}</Typography>
-                                    <Typography variant="body2" style={{ color: "#b3b3b3" }}>{music.artist}</Typography>
+                                    <Typography variant="body1" style={{ color: themeColorsSpotify.whiteColor }}>{music.musicName}</Typography>
+                                    <Typography variant="body2" style={{ color: themeColorsSpotify.grayColor }}>{music.artist}</Typography>
                                 </Box>
                                 <IconButton sx={{ pl: 3 }}>
-                                    <FavoriteBorderIcon style={{ fill: "white", width: 16, height: 16 }} />
+                                    <FavoriteBorderIcon style={{ fill: themeColorsSpotify.whiteColor, width: 16, height: 16 }} />
                                 </IconButton>
                             </>
                         )}
@@ -149,65 +138,65 @@ export default function Spotify(props: { theme: string }) {
                     <Box display="flex" alignItems="center" flexDirection="column" justifyContent="center" style={{ width: "60%" }}>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <IconButton aria-label="previous">
-                                {<ShuffleIcon style={{ fill: "white" }} />}
+                                {<ShuffleIcon style={{ fill: themeColorsSpotify.whiteColor }} />}
                             </IconButton>
 
                             <IconButton aria-label="previous">
-                                {<SkipPreviousIcon style={{ fill: "white" }} />}
+                                {<SkipPreviousIcon style={{ fill: themeColorsSpotify.whiteColor }} />}
                             </IconButton>
 
                             {isPaused && (
                                 <IconButton aria-label="play/play" onClick={() => playMusic()}>
-                                    <PlayArrowIcon color="secondary" sx={{ height: 38, width: 38 }} style={{ fill: "black", backgroundColor: "white", borderRadius: "50%", width: 32, height: 32 }} />
+                                    <PlayArrowIcon color="secondary" sx={{ height: 38, width: 38 }} style={{ fill: themeColorsSpotify.blackColor, backgroundColor: themeColorsSpotify.whiteColor, borderRadius: "50%", width: 32, height: 32 }} />
                                 </IconButton>
                             )}
 
                             {!isPaused && (
                                 <IconButton aria-label="play/pause" onClick={() => pauseMusic()}>
-                                    <PauseIcon color="secondary" sx={{ height: 38, width: 38 }} style={{ fill: "black", backgroundColor: "white", borderRadius: "50%", width: 32, height: 32 }} />
+                                    <PauseIcon color="secondary" sx={{ height: 38, width: 38 }} style={{ fill: themeColorsSpotify.blackColor, backgroundColor: themeColorsSpotify.whiteColor, borderRadius: "50%", width: 32, height: 32 }} />
                                 </IconButton>
                             )}
 
                             <IconButton aria-label="next">
-                                {<SkipNextIcon color="secondary" style={{ fill: "white" }} />}
+                                {<SkipNextIcon color="secondary" style={{ fill: themeColorsSpotify.whiteColor }} />}
                             </IconButton>
 
                             <IconButton aria-label="next">
-                                {<RepeatIcon color="secondary" style={{ fill: "white" }} />}
+                                {<RepeatIcon color="secondary" style={{ fill: themeColorsSpotify.whiteColor }} />}
                             </IconButton>
                         </Box>
                         <Stack spacing={2} direction="row" sx={{ pr: 1 }} alignItems="center" style={{ width: "60%" }}>
-                            <Typography variant="body2" style={{ color: "white" }}>{!isPaused ? timeFormat(diff).text : "0:00"}</Typography>
+                            <Typography variant="body2" style={{ color: themeColorsSpotify.whiteColor }}>{!isPaused ? timeFormat(diff).text : "0:00"}</Typography>
                             <Slider
-                                className={card.slider}
+                                className={styleClasses.spotifyPlayerSlider}
                                 defaultValue={0}
-                                value={slideFormat(diff, isPaused)}
+                                value={slideFormat(diff, isPaused, music)}
                                 sx={{
-                                    color: theme.palette.mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.87)',
+                                    color: themeColorsSpotify.veryDarkGrayDarkerColor,
                                 }}
                             // onChange={(e) => seekMusic(e)}
                             />
-                            <Typography variant="body2" style={{ color: "white" }}>{music.time}</Typography>
+                            <Typography variant="body2" style={{ color: themeColorsSpotify.whiteColor }}>{music.time}</Typography>
                         </Stack>
                     </Box>
                     <Box display="flex" justifyContent="flex-end" style={{ width: "20%" }} sx={{ pr: 2 }}>
                         <Stack spacing={2} direction="row" sx={{ pr: 1 }} alignItems="center" style={{ width: "40%" }}>
                             {!isMuted && (
                                 <IconButton sx={{ p: 0 }} onClick={muteSound}>
-                                    {<VolumeDownIcon style={{ fill: "white" }} />}
+                                    {<VolumeDownIcon style={{ fill: themeColorsSpotify.whiteColor }} />}
                                 </IconButton>
                             )}
                             {isMuted && (
                                 <IconButton sx={{ p: 0 }} onClick={unmuteSound}>
-                                    {<VolumeMuteIcon style={{ fill: "white" }} />}
+                                    {<VolumeMuteIcon style={{ fill: themeColorsSpotify.whiteColor }} />}
                                 </IconButton>
                             )}
 
                             <Slider
-                                className={card.slider}
+                                className={styleClasses.spotifyPlayerSlider}
                                 defaultValue={100}
                                 sx={{
-                                    color: theme.palette.mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.87)',
+                                    color: themeColorsSpotify.veryDarkGrayDarkerColor,
                                 }}
                                 value={volume}
                                 onChange={(e) => changeVolume(e)}
