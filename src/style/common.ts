@@ -189,3 +189,20 @@ export const spotifyComponents = makeStyles((theme: Theme) => ({
         },
     }
 }));
+
+export const experienceTimeLine = makeStyles((theme: Theme) => ({
+    timeLineItem: {
+        margin: 0,
+        paddingTop: 0,
+        paddingBottom: 0
+    },
+    timeLineDot: {
+        borderColor: themeColors.secondary,
+        backgroundColor: themeColors.secondary,
+    },
+    timeLineCard: {
+        boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 50px",
+        padding: 16,
+        borderRadius: 6
+    }
+}));

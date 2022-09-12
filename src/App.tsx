@@ -14,6 +14,7 @@ import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 
 import Home from "./containers/home";
 import Spotify from "./containers/projects/spotify";
+import Photography from "./containers/photography";
 import {
   setupTheme,
   setupI18n,
@@ -65,6 +66,7 @@ export default function App() {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/spotify" element={<Spotify />} />
+            <Route path="/photography" element={<Photography />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </Box>

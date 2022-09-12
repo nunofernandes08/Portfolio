@@ -9,26 +9,33 @@ import { Box, Typography } from "@mui/material";
 import * as spotify from "../../../../assets/projects/spotify.json";
 import * as netflix from "../../../../assets/projects/netflix.json";
 import * as amazon from "../../../../assets/projects/amazon.json";
+import * as youtube from "../../../../assets/projects/youtube.json";
+import { Projects } from "../../../../types";
 
-export default function ProjectCard(props: { img: string, title: string, description: string, src: string, logo: string }) {
+export default function ProjectCard(props: { img: string, title: string, description: string, src: string, index: number, length: number }) {
     const navigate = useNavigate();
 
     const findLogoAndName = (title: string) => {
         switch (title) {
-            case 'Spotify':
+            case Projects.SPOTIFY:
                 return {
                     logo: spotify,
-                    name: 'spotify'
+                    name: Projects.SPOTIFY
                 };
-            case 'Netflix':
+            case Projects.NETFLIX:
                 return {
                     logo: netflix,
-                    name: 'netflix'
+                    name: Projects.NETFLIX
                 };
-            case 'Amazon':
+            case Projects.AMAZON:
                 return {
                     logo: amazon,
-                    name: 'amazon'
+                    name: Projects.AMAZON
+                };
+            case Projects.YOUTUBE:
+                return {
+                    logo: youtube,
+                    name: Projects.YOUTUBE
                 };
             default:
                 return {
@@ -46,7 +53,7 @@ export default function ProjectCard(props: { img: string, title: string, descrip
     };
 
     return (
-        <Box className="card" onClick={() => navigate(`/${props.src}`)}>
+        <Box className="card" onClick={() => navigate(`/${props.src}`)} sx={{ mb: props.length - 3 < props.index + 1 ? 0 : 7 }}>
             <Box className="content">
                 <Box display="flex" alignItems="center" justifyContent=" center" flexDirection="column" className="front" style={{ background: `url(${props.img})`, backgroundSize: "auto", backgroundRepeat: "no-repeat" }}>
                     <Lottie options={defaultOptions} width={250} height={250} style={{ margin: 0 }} />

@@ -12,6 +12,8 @@ import { themeColors, welcomeComponent } from "../../style/common";
 
 import backgroundAnimatedBlue from "../../assets/welcome/splashBlue.svg";
 
+const Bounce = require("react-reveal/Bounce")
+
 const socialImages = [
   { image: email, link: "https://www.hotmail.com/" },
   { image: twitter, link: "https://www.twitter.com/" },
@@ -29,33 +31,35 @@ export default function Welcome() {
         backgroundImage: `url(${backgroundAnimatedBlue})`,
       }}
     >
-      <Box
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <img
-          className={welcomeComponentClass.profileImage}
-          src={profileImage}
-          alt=""
-          style={{ borderColor: themeColors.background }}
-        />
-        <Typography variant="h4">Nuno Fernandes</Typography>
-        <Box className={welcomeComponentClass.social}>
-          {socialImages.map((sI, index) => {
-            return (
-              <a href={sI.link} key={index}>
-                <img
-                  className={welcomeComponentClass.socialImage}
-                  src={sI.image}
-                  alt=""
-                />
-              </a>
-            );
-          })}
+      <Bounce top>
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <img
+            className={welcomeComponentClass.profileImage}
+            src={profileImage}
+            alt=""
+            style={{ borderColor: themeColors.background }}
+          />
+          <Typography variant="h4">Nuno Fernandes</Typography>
+          <Box className={welcomeComponentClass.social}>
+            {socialImages.map((sI, index) => {
+              return (
+                <a href={sI.link} key={index}>
+                  <img
+                    className={welcomeComponentClass.socialImage}
+                    src={sI.image}
+                    alt=""
+                  />
+                </a>
+              );
+            })}
+          </Box>
         </Box>
-      </Box>
+      </Bounce>
     </Box>
   );
 }

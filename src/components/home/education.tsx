@@ -3,22 +3,22 @@ import React from "react";
 import { Box } from "@mui/material";
 
 import GeneralBox from "./components/general-box";
-import EducationCard from "./components/edutcation/education-cards";
+import EducationCard from "./components/education/education-cards";
 
 const educations = [{
-    school: "Lorem Ipsum is simply",
-    location: "Lorem Ipsum",
-    period: "jan 2020 - jan 2021",
+    school: "Escola Bernardino Machado",
+    location: "Vila Nova de Famalicão",
+    period: "Sept 2012 - Jul 2015",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
 }, {
-    school: "Lorem Ipsum is simply",
-    location: "Lorem Ipsum",
-    period: "jan 2020 - jan 2021",
+    school: "Escola Padre Benjamim Salgado",
+    location: "Vila Nova de Famalicão",
+    period: "Sept 2015 - Jul 2019",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
 }, {
-    school: "Lorem Ipsum is simply",
-    location: "Lorem Ipsum",
-    period: "jan 2020 - jan 2021",
+    school: "Inst. Politécnico do Cávado e Ave",
+    location: "Guimarães",
+    period: "Sept 2019 - Jul 2021",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
 }]
 
