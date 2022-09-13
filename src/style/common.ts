@@ -6,6 +6,7 @@ export const themeColors = {
     primaryLight: '#053F5E',
     primaryEvenLighter: '#115173',
     secondary: '#FFD700',
+    secondaryLight: '#ffec7f99',
     generalContrastText: '#000',
     background: '#fff',
 }
@@ -187,7 +188,24 @@ export const spotifyComponents = makeStyles((theme: Theme) => ({
                 boxShadow: 'none',
             },
         },
-    }
+    },
+    spotifyPlayerSliderAppTsx: {
+        '& .MuiSlider-track': {
+            border: 'none',
+            backgroundColor: themeColors.secondary
+        },
+        '& .MuiSlider-thumb': {
+            width: 0,
+            height: 0,
+            backgroundColor: '#fff',
+            '&:before': {
+                boxShadow: '0 4px 8px rgba(0,0,0,0.4)',
+            },
+            '&:hover, &.Mui-focusVisible, &.Mui-active': {
+                boxShadow: 'none',
+            },
+        },
+    },
 }));
 
 export const experienceTimeLine = makeStyles((theme: Theme) => ({

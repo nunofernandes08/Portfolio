@@ -24,33 +24,21 @@ export const chooseMusic = (id: string) => {
     return possibleMusics.find(item => item.id === id) || { id: "", artist: "", musicName: "", img: "", time: "0:00", total: "" }
 }
 
-export const timeFormat = (date: Date) => {
-    if (!date) return {
-        text: "0:00",
-        mm: 0,
-        ss: 0
-    }
+export const timeFormat = (mm: number, ss: number) => {
+    const timer = `${mm}:${ss.toString().length === 1 ? `0${ss}` : ss}`
 
-    let mm = date.getUTCMinutes();
-    let ss = date.getSeconds();
-
-    const timer = `${mm}:${ss}`
-
-    return {
-        text: timer,
-        date
-    }
+    return timer
 }
 
 export const goToSpotify = () => {
     return window.open('https://open.spotify.com/', '_blank')
 }
 
-export const slideFormat = (diff: any, isPaused: boolean, music: any) => {
-    if (!diff || isPaused) return 0
+export const slideFormat = (count: string, started: boolean, music: any) => {
+    if (!count || started) return 0
 
-    const musicTotal = parseInt(music.total.replaceAll(":", "").substring(3, 6))
-    const timer = parseInt(diff.toLocaleTimeString().replaceAll(":", "").substring(3, 6)) as number
+    const musicTime = parseInt(music.time.replaceAll(":", ""))
+    const timer = parseInt(count.replaceAll(":", ""))
 
-    return (timer / musicTotal) * 100
+    return (timer / musicTime) * 100 || 0
 }
