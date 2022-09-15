@@ -6,6 +6,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import { spotifyComponents } from "../../../../style/common";
+
 import { goToSpotify } from "../../../../services/utils";
 
 export default function Navbar() {

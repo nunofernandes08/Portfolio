@@ -3,14 +3,10 @@ import React from "react";
 import { Box } from "@mui/material";
 
 import Welcome from "../components/home/welcome";
-import AboutMe from "../components/home/about-me";
-import Projects from "../components/home/projects";
-import Education from "../components/home/education";
-import Experience from "../components/home/experience";
+
+import { componentsWithMargins } from "../api/home/service";
 
 const Slide = require("react-reveal/Slide")
-
-const componentsWithMargins = [AboutMe, Education, Experience, Projects]
 
 export default function Home() {
   const componentPaddingTop = (index: number) => {
@@ -28,20 +24,18 @@ export default function Home() {
           return (
             <React.Fragment key={index}>
               {index & 1 ? (
-                <Slide left>
+                <Slide bottom left>
                   <Box sx={{ pt: componentPaddingTop(index), pb: componentPaddingBottom(index) }}>
                     <Component />
                   </Box>
                 </Slide>
               ) : (
-                <Slide right>
+                <Slide bottom right>
                   <Box sx={{ pt: componentPaddingTop(index), pb: componentPaddingBottom(index) }}>
                     <Component />
                   </Box>
                 </Slide>
               )}
-
-
             </React.Fragment>
           )
         })}

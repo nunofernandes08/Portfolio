@@ -3,10 +3,11 @@ import Lottie from "react-lottie";
 
 import { Box, Grid, Typography } from "@mui/material";
 
-import { useCommonStyles } from "../../style/common";
+import GeneralBox from "../home/components/general-box";
 
 import * as photography from "../../assets/photography/photo.json";
-import GeneralBox from "../home/components/general-box";
+
+import { useCommonStyles } from "../../style/common";
 
 export default function Why() {
     const commonClasses = useCommonStyles();

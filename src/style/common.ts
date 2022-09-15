@@ -58,7 +58,7 @@ export const welcomeComponent = makeStyles((theme: Theme) => ({
         height: 230,
         width: 230,
         borderRadius: "50%",
-        marginTop: 170,
+        marginTop: 100,
         border: "10px solid",
     },
     social: {
@@ -168,7 +168,7 @@ export const spotifyComponents = makeStyles((theme: Theme) => ({
     spotifySideBarBottomText: {
         fontSize: "0.6875rem",
         fontWeight: 400,
-        color: themeColorsSpotify.whiteColor,
+        color: themeColorsSpotify.grayColor,
         height: 25.59,
         cursor: "pointer"
     },
@@ -180,7 +180,7 @@ export const spotifyComponents = makeStyles((theme: Theme) => ({
         '& .MuiSlider-thumb': {
             width: 0,
             height: 0,
-            backgroundColor: '#fff',
+            backgroundColor: themeColorsSpotify.whiteColor,
             '&:before': {
                 boxShadow: '0 4px 8px rgba(0,0,0,0.4)',
             },
@@ -197,7 +197,7 @@ export const spotifyComponents = makeStyles((theme: Theme) => ({
         '& .MuiSlider-thumb': {
             width: 0,
             height: 0,
-            backgroundColor: '#fff',
+            backgroundColor: themeColorsSpotify.whiteColor,
             '&:before': {
                 boxShadow: '0 4px 8px rgba(0,0,0,0.4)',
             },
@@ -222,5 +222,28 @@ export const experienceTimeLine = makeStyles((theme: Theme) => ({
         boxShadow: "rgba(0, 0, 0, 0.1) 0px 10px 50px",
         padding: 16,
         borderRadius: 6
+    }
+}));
+
+export const netflixComponents = makeStyles((theme: Theme) => ({
+    netflixWelcome: {
+        height: 732,
+        width: "100%",
+        backgroundImage: 'linear-gradient(0deg,rgba(0,0,0,1) 0,transparent 60%,rgba(0,0,0,1)), url(https://assets.nflxext.com/ffe/siteui/vlv3/a795ee10-8c6d-467c-8159-254be2b69013/adbb07ba-f159-4633-b6f3-4f6ae8837a4d/PT-en-20220912-popsignuptwoweeks-perspective_alpha_website_small.jpg)'
+    },
+    netflixButtonSignIn: {
+        backgroundColor: '#e50914',
+        float: 'right',
+        fontSize: '1rem',
+        fontWeight: 400,
+        lineHEight: 'normal',
+        padding: '7px 17px',
+        color: 'white',
+        textTransform: 'none',
+        width: 84.19,
+        height: 34
+    },
+    netflixSelectIcon: {
+        fill: 'white'
     }
 }));

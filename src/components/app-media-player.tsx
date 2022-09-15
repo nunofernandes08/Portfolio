@@ -9,6 +9,8 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 import { spotifyComponents, themeColors, themeColorsSpotify } from "../style/common";
 
+import { Music } from "../types";
+
 const Slide = require("react-reveal/Slide")
 
 export default function AppMediaPlayer(props: {
@@ -16,7 +18,7 @@ export default function AppMediaPlayer(props: {
     pauseMusic: Function,
     isPaused: boolean,
     count: string,
-    music: any,
+    music: Music,
     slideValue: number,
     stopMusic: Function
 }) {

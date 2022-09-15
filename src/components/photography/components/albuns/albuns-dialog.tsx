@@ -7,7 +7,7 @@ import "./cardAlbum.css"
 export default function AlbunsDialog(props: {
     isOpen: boolean;
     handleClose: Function;
-    photos: any[];
+    photos: string[];
     title: string;
 }) {
     return (
@@ -23,7 +23,7 @@ export default function AlbunsDialog(props: {
                     display="flex"
                     flexWrap="wrap"
                 >
-                    {props.photos.map((item, index) => (
+                    {props.photos.map((item: string, index) => (
                         <img key={index} src={item} alt="" style={{ width: 'calc(100% / 4)', height: 300, objectFit: "contain" }} />
                     ))}
                 </Box>

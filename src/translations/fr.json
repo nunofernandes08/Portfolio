@@ -1,0 +1,35 @@
+{
+    "GENERAL": {
+        "LOREM_LARGE": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "LOREM_CARD": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "LOAD_MORE": "Charger plus"
+    },
+    "HOME": {
+        "COMPONENTS_TITLES": {
+            "ABOUT_ME": "À propos de moi",
+            "EDUCATION": "Éducation",
+            "EXPERIENCE": "Vivre",
+            "PROJECTS": "Projets"
+        },
+        "EDUCATION": {
+            "SCHOOL_BERNARDINO_MACHADO": "École Bernardino Machado",
+            "SCHOOL_PADRE_BENJAMIM_SALGADO": "École Padre Benjamim Salgado",
+            "POLYTECHNIC_INSTITUE_OF_CAVADO_AND_AVE": "Inst. Polytechnique de Cávado et Ave"
+        }
+    },
+    "PROJECTS": {
+        "DESCRIPTION": {
+            "SPOTIFY": "Spotify est un fournisseur suédois propriétaire de services de streaming audio et multimédia fondé le 23 avril 2006 par Daniel Ek et Martin Lorentzon.",
+            "NETFLIX": "Netflix, Inc. est un service de streaming par abonnement américain et une société de production basée à Los Gatos, en Californie.",
+            "AMAZON": "Amazon.com, Inc. est une société technologique multinationale américaine qui se concentre sur le commerce électronique, le cloud computing, le streaming numérique et l'intelligence artificielle.",
+            "YOUTUBE": "YouTube est une plate-forme américaine de partage de vidéos en ligne et de médias sociaux dont le siège est à San Bruno, en Californie.",
+            "REDDIT": "Reddit est un site Web américain d'agrégation de nouvelles sociales, de classification de contenu et de discussion. Les utilisateurs enregistrés soumettent du contenu au site tel que des liens, des messages texte...",
+            "FACEBOOK": "Facebook est un réseau social en ligne et un service de réseautage social appartenant à la société américaine Meta Platforms.",
+            "LINKEDIN": "LinkedIn est un service en ligne américain axé sur les affaires et l'emploi qui fonctionne via des sites Web et des applications mobiles."
+        }
+    },
+    "DIALOGS": {
+        "BUG": "Ce site contient quelques bugs!",
+        "RESOLVE": "Ils seront résolus rapidement."
+    }
+}

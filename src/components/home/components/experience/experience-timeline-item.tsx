@@ -1,11 +1,11 @@
 import React from "react";
 
 import { Box, Button, Chip, Typography } from "@mui/material";
-
 import { TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot } from "@mui/lab"
 
-import "../experience/cards.css"
 import { themeColors, experienceTimeLine } from "../../../../style/common";
+
+import "../experience/cards.css"
 
 export default function ExperienceTimeLineItem(props: { logo: string, title: string, description: string, location: string, period: string, src: string }) {
     const styleClasses = experienceTimeLine()

@@ -1,3 +1,35 @@
 {
-  "GENERAL": {}
+    "GENERAL": {
+        "LOREM_LARGE": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "LOREM_CARD": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "LOAD_MORE": "Carregar mais"
+    },
+    "HOME": {
+        "COMPONENTS_TITLES": {
+            "ABOUT_ME": "Sobre mim",
+            "EDUCATION": "Educação",
+            "EXPERIENCE": "Experiência",
+            "PROJECTS": "Projetos"
+        },
+        "EDUCATION": {
+            "SCHOOL_BERNARDINO_MACHADO": "Escola Bernardino Machado",
+            "SCHOOL_PADRE_BENJAMIM_SALGADO": "Escola Padre Benjamim Salgado",
+            "POLYTECHNIC_INSTITUE_OF_CAVADO_AND_AVE": "Inst. Politécnico do Cávado e Ave"
+        }
+    },
+    "PROJECTS": {
+        "DESCRIPTION": {
+            "SPOTIFY": "Spotify é um empresa de serviços de mídia e streaming de áudio sueco fundado em 23 de abril de 2006 por Daniel Ek e Martin Lorentzon.",
+            "NETFLIX": "Netflix, Inc. é uma empresa de produção e serviço de streaming por assinatura americana com sede em Los Gatos, Califórnia.",
+            "AMAZON": "A Amazon.com, Inc. é uma empresa de tecnologia multinacional americana que se concentra em comércio eletrônico, computação em nuvem, streaming digital e inteligência artificial.",
+            "YOUTUBE": "O YouTube é uma plataforma americana de compartilhamento de vídeos online e mídia social com sede em San Bruno, Califórnia.",
+            "REDDIT": "Reddit é um site americano de agregação de notícias sociais, classificação de conteúdo e discussão. Os usuários registrados enviam conteúdo para o site, como links, mensagens de texto...",
+            "FACEBOOK": "O Facebook é uma mídia social online e serviço de rede social de propriedade da empresa americana Meta Platforms.",
+            "LINKEDIN": "O LinkedIn é um serviço online norte-americano voltado para negócios e empregos que opera por meio de sites e aplicativos móveis."
+        }
+    },
+    "DIALOGS": {
+        "BUG": "Este website ainda tem alguns bugs!",
+        "RESOLVE": "Serão resolvidos rapidamente."
+    }
 }

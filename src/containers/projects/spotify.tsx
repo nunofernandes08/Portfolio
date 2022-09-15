@@ -17,6 +17,8 @@ import SideBar from "../../components/projects/spotify/sidebar";
 
 import { spotifyComponents, themeColorsSpotify } from "../../style/common";
 
+import { Music } from "../../types";
+
 export default function Spotify(props: {
     saveMusic: Function,
     playMusic: Function,
@@ -24,7 +26,7 @@ export default function Spotify(props: {
     changeVolume: Function,
     muteSound: Function,
     unmuteSound: Function
-    music: any,
+    music: Music,
     isPaused: boolean,
     isMuted: boolean,
     latestVolume: number,

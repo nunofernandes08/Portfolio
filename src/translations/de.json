@@ -1,0 +1,35 @@
+{
+    "GENERAL": {
+        "LOREM_LARGE": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "LOREM_CARD": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "LOAD_MORE": "Mehr laden"
+    },
+    "HOME": {
+        "COMPONENTS_TITLES": {
+            "ABOUT_ME": "Über mich",
+            "EDUCATION": "Ausbildung",
+            "EXPERIENCE": "Erfahrung",
+            "PROJECTS": "Projekte"
+        },
+        "EDUCATION": {
+            "SCHOOL_BERNARDINO_MACHADO": "Schule Bernardino Machado",
+            "SCHOOL_PADRE_BENJAMIM_SALGADO": "Schule Padre Benjamim Salgado",
+            "POLYTECHNIC_INSTITUE_OF_CAVADO_AND_AVE": "Poly. Institut von Cávado und Ave"
+        }
+    },
+    "PROJECTS": {
+        "DESCRIPTION": {
+            "SPOTIFY": "Spotify ist ein proprietärer schwedischer Anbieter von Audio-Streaming- und Mediendiensten, der am 23. April 2006 von Daniel Ek und Martin Lorentzon gegründet wurde.",
+            "NETFLIX": "Netflix, Inc. ist ein US-amerikanischer Abonnement-Streamingdienst und eine Produktionsfirma mit Sitz in Los Gatos, Kalifornien.",
+            "AMAZON": "Amazon.com, Inc. ist ein amerikanisches multinationales Technologieunternehmen, das sich auf E-Commerce, Cloud Computing, digitales Streaming und künstliche Intelligenz konzentriert.",
+            "YOUTUBE": "YouTube ist eine amerikanische Online-Videoplattform und Social-Media-Plattform mit Hauptsitz in San Bruno, Kalifornien.",
+            "REDDIT": "Reddit ist eine amerikanische Social-News-Aggregations-, Inhaltsbewertungs- und Diskussionswebsite. Registrierte Benutzer übermitteln Inhalte auf der Website wie Links, Textbeiträge ...",
+            "FACEBOOK": "Facebook ist ein Online-Social-Media- und Social-Networking-Dienst, der dem amerikanischen Unternehmen Meta Platforms gehört.",
+            "LINKEDIN": "LinkedIn ist ein amerikanischer unternehmens- und beschäftigungsorientierter Onlinedienst, der über Websites und mobile Apps betrieben wird."
+        }
+    },
+    "DIALOGS": {
+        "BUG": "This website contain some bugs!",
+        "RESOLVE": "Sie werden schnell gelöst."
+    }
+}

@@ -2,15 +2,19 @@ import React from "react";
 import Lottie from "react-lottie";
 import { useNavigate } from 'react-router-dom';
 
-import "../projects/cards.css"
-
 import { Box, Typography } from "@mui/material";
 
 import * as spotify from "../../../../assets/projects/spotify.json";
 import * as netflix from "../../../../assets/projects/netflix.json";
 import * as amazon from "../../../../assets/projects/amazon.json";
 import * as youtube from "../../../../assets/projects/youtube.json";
+import * as reddit from "../../../../assets/projects/reddit.json";
+import * as facebook from "../../../../assets/projects/facebook.json";
+import * as linkedin from "../../../../assets/projects/linkedin.json";
+
 import { Projects } from "../../../../types";
+
+import "../projects/cards.css"
 
 export default function ProjectCard(props: { img: string, title: string, description: string, src: string, index: number, length: number }) {
     const navigate = useNavigate();
@@ -36,6 +40,21 @@ export default function ProjectCard(props: { img: string, title: string, descrip
                 return {
                     logo: youtube,
                     name: Projects.YOUTUBE
+                };
+            case Projects.REDDIT:
+                return {
+                    logo: reddit,
+                    name: Projects.REDDIT
+                };
+            case Projects.FACEBOOK:
+                return {
+                    logo: facebook,
+                    name: Projects.FACEBOOK
+                };
+            case Projects.LINKEDIN:
+                return {
+                    logo: linkedin,
+                    name: Projects.LINKEDIN
                 };
             default:
                 return {

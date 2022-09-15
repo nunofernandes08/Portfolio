@@ -5,6 +5,7 @@ import AddIcon from '@mui/icons-material/Add';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import { spotifyComponents, themeColorsSpotify } from "../../../style/common";
+
 import { goToSpotify } from "../../../services/utils";
 
 const listItems = [{
@@ -61,7 +62,7 @@ export default function SideBar() {
                                 ))}
                             </List>
                             <List sx={{ py: 0, mt: 3 }}>
-                                {["Create Playlist", "Liked Songs"].map((item, index) => (
+                                {["Create Playlist", "Liked Songs"].map((item: string, index: number) => (
                                     <ListItem key={index} disablePadding sx={{ px: 1 }}>
                                         <ListItemButton sx={{ px: 2, py: 0, height: 40 }} onClick={() => goToSpotify()}>
                                             {index === 0 ? CreatePlaylistButton() : LikeSongsButton()}

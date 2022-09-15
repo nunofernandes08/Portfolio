@@ -1,5 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
+import { useTranslation } from "react-i18next";
 
 import { Box, Dialog, DialogContent, Typography } from "@mui/material";
 
@@ -9,6 +10,7 @@ export default function DisclaimerDialog(props: {
     isOpen: boolean;
     handleClose: Function;
 }) {
+    const { t } = useTranslation()
 
     const defaultOptions = {
         loop: true,
@@ -26,8 +28,8 @@ export default function DisclaimerDialog(props: {
         >
             <DialogContent>
                 <Box display="flex" flexDirection="column" alignItems="center">
-                    <Typography variant="h4">Este website ainda tem alguns bugs!</Typography>
-                    <Typography variant="h4">Iram ser resolvidos rapidamente.</Typography>
+                    <Typography variant="h4">{t("DIALOGS.BUG")}</Typography>
+                    <Typography variant="h4">{t("DIALOGS.RESOLVE")}</Typography>
                     <Lottie options={defaultOptions} height={500} width={500} />
                 </Box>
             </DialogContent>

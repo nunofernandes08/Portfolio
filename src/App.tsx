@@ -17,6 +17,8 @@ import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import Home from "./containers/home";
 import Spotify from "./containers/projects/spotify";
 import Photography from "./containers/photography";
+import Netflix from "./containers/projects/netflix";
+
 import {
   setupTheme,
   setupI18n,
@@ -29,8 +31,9 @@ import * as robot from "./assets/robot.json";
 import AppMediaPlayer from "./components/app-media-player";
 import { chooseMusic, slideFormat, timeFormat } from "./services/utils";
 
-import "./App.css";
 import DisclaimerDialog from "./components/disclaimer-dialog";
+
+import "./App.css";
 
 setupI18n();
 const theme = setupTheme();
@@ -144,6 +147,7 @@ export default function App() {
     }, 5000);
   }, []);
 
+
   return (
     <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
@@ -175,18 +179,19 @@ export default function App() {
                 slideValue={slideValue}
               />
             } />
+            <Route path="/netflix" element={<Netflix />} />
             <Route path="/photography" element={<Photography />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>
         </Box>
 
-        {showBot && currentPath !== Paths.SPOTIFY && (
+        {showBot && currentPath !== Paths.SPOTIFY && currentPath !== Paths.NETFLIX && (
           <Box style={{ position: "fixed", bottom: 20, right: 0 }}>
             <Lottie options={defaultOptions} height={200} width={200} />
           </Box>
         )}
 
-        {!showBot && currentPath !== Paths.SPOTIFY && music.artist && (
+        {!showBot && currentPath !== Paths.SPOTIFY && currentPath !== Paths.NETFLIX && music.artist && (
           <Box style={{ position: "fixed", bottom: 20, right: 20 }}>
             <AppMediaPlayer
               playMusic={playMusic}

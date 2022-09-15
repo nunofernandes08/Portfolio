@@ -1,0 +1,35 @@
+{
+    "GENERAL": {
+        "LOREM_LARGE": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "LOREM_CARD": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "LOAD_MORE": "Load more"
+    },
+    "HOME": {
+        "COMPONENTS_TITLES": {
+            "ABOUT_ME": "About me",
+            "EDUCATION": "Education",
+            "EXPERIENCE": "Experience",
+            "PROJECTS": "Projects"
+        },
+        "EDUCATION": {
+            "SCHOOL_BERNARDINO_MACHADO": "Bernardino Machado School",
+            "SCHOOL_PADRE_BENJAMIM_SALGADO": "Padre Benjamim Salgado School",
+            "POLYTECHNIC_INSTITUE_OF_CAVADO_AND_AVE": "Poly. Inst. of Cávado and Ave"
+        }
+    },
+    "PROJECTS": {
+        "DESCRIPTION": {
+            "SPOTIFY": "Spotify is a proprietary Swedish audio streaming and media services provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon.",
+            "NETFLIX": "Netflix, Inc. is an American subscription streaming service and production company based in Los Gatos, California.",
+            "AMAZON": "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+            "YOUTUBE": "YouTube is an American online video sharing and social media platform headquartered in San Bruno, California.",
+            "REDDIT": "Reddit is an American social news aggregation, content rating, and discussion website. Registered users submit content to the site such as links, text posts...",
+            "FACEBOOK": "Facebook is an online social media and social networking service owned by American company Meta Platforms.",
+            "LINKEDIN": "LinkedIn is an American business and employment-oriented online service that operates via websites and mobile apps."
+        }
+    },
+    "DIALOGS": {
+        "BUG": "This website contain some bugs!",
+        "RESOLVE": "They will be resolved quickly."
+    }
+}

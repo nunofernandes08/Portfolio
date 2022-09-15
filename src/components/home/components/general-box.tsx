@@ -2,7 +2,6 @@ import React from "react";
 
 import { Box, Typography } from "@mui/material";
 
-
 export default function GeneralBox(props: { title: string, children: React.ReactNode }) {
     return (
         <Box>

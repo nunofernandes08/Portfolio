@@ -1,0 +1,35 @@
+{
+    "GENERAL": {
+        "LOREM_LARGE": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "LOREM_CARD": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "LOAD_MORE": "Carga más"
+    },
+    "HOME": {
+        "COMPONENTS_TITLES": {
+            "ABOUT_ME": "Sobre mí",
+            "EDUCATION": "Educación",
+            "EXPERIENCE": "Experiencia",
+            "PROJECTS": "Proyectos"
+        },
+        "EDUCATION": {
+            "SCHOOL_BERNARDINO_MACHADO": "Escuela Bernardino Machado",
+            "SCHOOL_PADRE_BENJAMIM_SALGADO": "Escuela Padre Benjamim Salgado",
+            "POLYTECHNIC_INSTITUE_OF_CAVADO_AND_AVE": "Inst. Politécnico de Cávado y Ave"
+        }
+    },
+    "PROJECTS": {
+        "DESCRIPTION": {
+            "SPOTIFY": "Spotify es un proveedor de servicios multimedia y de transmisión de audio sueco fundado el 23 de abril de 2006 por Daniel Ek y Martin Lorentzon.",
+            "NETFLIX": "Netflix, Inc. es una compañía de producción y servicio de transmisión por suscripción estadounidense con sede en Los Gatos, California.",
+            "AMAZON": "Amazon.com, Inc. es una empresa de tecnología multinacional estadounidense que se centra en el comercio electrónico, la computación en la nube, la transmisión digital y la inteligencia artificial.",
+            "YOUTUBE": "YouTube es una plataforma estadounidense para compartir videos en línea y redes sociales con sede en San Bruno, California.",
+            "REDDIT": "Reddit es un sitio web estadounidense de agregación de noticias sociales, calificación de contenido y discusión. Los usuarios registrados envían contenido al sitio, como enlaces, publicaciones de texto...",
+            "FACEBOOK": "Facebook es un servicio de redes sociales y redes sociales en línea propiedad de la empresa estadounidense Meta Platforms.",
+            "LINKEDIN": "LinkedIn es un servicio en línea estadounidense orientado a los negocios y el empleo que opera a través de sitios web y aplicaciones móviles."
+        }
+    },
+    "DIALOGS": {
+        "BUG": "Este sitio web contiene algunos errores!",
+        "RESOLVE": "Ellas serán resueltos rápidamente."
+    }
+}

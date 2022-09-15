@@ -1,41 +1,71 @@
-import React from "react";
+import React, { useCallback, useEffect, useState, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 import GeneralBox from "./components/general-box";
 import ProjectCard from "./components/projects/project-card";
 
-const projects = [{
-    img: "https://ishoppingstar.com/wp-content/uploads/2022/03/60c27838dcd6e.jpg",
-    title: "Spotify",
-    description: "Spotify is a proprietary Swedish audio streaming and media services provider founded on 23 April 2006 by Daniel Ek and Martin Lorentzon.",
-    src: "spotify",
-}, {
-    img: "https://arena.rtp.pt/wp-content/uploads/2021/05/netflix.png",
-    title: "Netflix",
-    description: "Netflix, Inc. is an American subscription streaming service and production company based in Los Gatos, California.",
-    src: "netflix",
+import { allProjects } from "../../api/home/service";
 
-}, {
-    img: "https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/05/amazon.jpg",
-    title: "Amazon",
-    description: "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    src: "amazon",
-}, {
-    img: "https://wallpaper.dog/large/977108.jpg",
-    title: "Youtube",
-    description: "YouTube is an American online video sharing and social media platform headquartered in San Bruno, California.",
-    src: "youtube",
-}]
+import { Project } from "../../types";
+
+const Slide = require("react-reveal/Slide")
 
 export default function Projects() {
+    const [projects, setProjects] = useState<Project[]>(allProjects.slice(0, 3))
+    const [alreadyAdded, setAlreadyAdded] = useState(false)
+    const [y, setY] = useState(window.scrollY);
+    const ref = useRef()
+
+    const { t } = useTranslation();
+
+    const moreProjects = () => {
+        const lastItems = projects.length
+        let data = projects
+        data = data.concat(allProjects.slice(lastItems, lastItems + 3))
+
+        setProjects(data)
+        setAlreadyAdded(!alreadyAdded)
+    }
+
+    const handleNavigation = useCallback(
+        (e: any) => {
+            const window = e.currentTarget;
+            if (y > window.scrollY) {
+                if (window.scrollY === 0) {
+                    setProjects(allProjects.slice(0, 3))
+                }
+            }
+            setY(window.scrollY);
+        }, [y]
+    );
+
+    useEffect(() => {
+        setY(window.scrollY);
+        window.addEventListener("scroll", handleNavigation);
+
+        return () => {
+            window.removeEventListener("scroll", handleNavigation);
+        };
+    }, [handleNavigation]);
+
     return (
-        <GeneralBox title="Projects">
-            <Box display="flex" flexWrap="wrap" justifyContent="space-between">
-                {projects.map((project, index) => (
-                    <ProjectCard key={index} img={project.img} title={project.title} description={project.description} src={project.src} index={index} length={projects.length} />
-                ))}
+        <GeneralBox title={t("HOME.COMPONENTS_TITLES.PROJECTS")}>
+            <Box display="flex" flexWrap="wrap" justifyContent="space-between" ref={ref}>
+                <Slide bottom>
+                    {projects.map((project: Project, index: number) => (
+                        <ProjectCard key={index} img={project.img} title={project.title} description={t(project.description)} src={project.src} index={index} length={projects.length} />
+                    ))}
+                </Slide>
             </Box>
+            {Number.isInteger(projects.length / 3) && (
+                <Slide bottom>
+                    <Box display="flex" justifyContent="center" sx={{ pt: 8 }}>
+                        <Button variant="contained" color="secondary" style={{ textTransform: 'none', fontWeight: 'bold' }} onClick={moreProjects}>{t("GENERAL.LOAD_MORE")}</Button>
+                    </Box>
+                </Slide>
+            )}
         </GeneralBox>
     );
 }

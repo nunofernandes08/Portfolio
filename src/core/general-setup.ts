@@ -4,6 +4,11 @@ import { initReactI18next } from "react-i18next";
 import { createTheme } from "@mui/material/styles";
 
 import translationPT from '../translations/pt.json';
+import translationEN from '../translations/en.json';
+import translationFR from '../translations/fr.json';
+import translationES from '../translations/es.json';
+import translationDE from '../translations/de.json';
+
 import { themeColors } from "../style/common";
 
 export const setupI18n = () => {
@@ -13,10 +18,22 @@ export const setupI18n = () => {
             resources: {
                 pt: {
                     translation: translationPT
+                },
+                en: {
+                    translation: translationEN
+                },
+                es: {
+                    translation: translationES
+                },
+                fr: {
+                    translation: translationFR
+                },
+                de: {
+                    translation: translationDE
                 }
             },
-            lng: "pt",
-            fallbackLng: "pt",
+            lng: 'en',
+            fallbackLng: 'en',
             interpolation: {
                 escapeValue: false
             }
