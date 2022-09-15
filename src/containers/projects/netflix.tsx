@@ -1,36 +1,31 @@
 import React from "react";
 
-import { Box, Button, Typography } from "@mui/material";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Box, Typography } from "@mui/material";
 
-import Navbar from "../../components/projects/netflix/navbar";
+import Welcome from "../../components/projects/netflix/welcome";
+import Hr from "../../components/projects/netflix/hr"
 
 import { netflixComponents } from "../../style/common";
 
 export default function Netflix() {
     const styleClasses = netflixComponents()
+
     return (
         <React.Fragment>
-            <Box className={styleClasses.netflixWelcome}>
-                <Navbar />
-
-                <Box display="flex" justifyContent="center" alignItems="center" flexDirection="column" style={{ height: "calc(100% - 73px)" }}>
-                    <Box display="flex" alignItems="center" flexDirection="column">
-                        <Typography variant="h2" style={{ color: 'white' }}>Unlimited movies, TV</Typography>
-                        <Typography variant="h2" style={{ color: 'white' }}>shows, and more.</Typography>
-                        <Typography variant="h4" style={{ color: 'white', fontSize: "1.625rem", fontWeight: "400", paddingTop: 10 }}>Watch anywhere. Cancel anytime.</Typography>
-                    </Box>
-                    <Box display="flex" alignItems="center" flexDirection="column" sx={{ mt: 3 }}>
-                        <Typography variant="h4" style={{ color: 'white', fontSize: "1.2rem", fontWeight: "400", paddingTop: 10, paddingBottom: 20 }}>Ready to watch? Enter your email to create or restart your membership.</Typography>
-                        <Box display="flex" justifyContent="center">
-                            <input style={{ background: "white", border: "0px solid white", borderRadius: 1, width: 450, paddingLeft: 10, fontSize: 16 }} placeholder="Email address" />
-                            <Button style={{ width: 212.97, height: 60, backgroundColor: '#e50914', borderRadius: 0, textTransform: 'none', fontSize: '1.625rem', color: 'white' }}>Get Started <ArrowForwardIosIcon sx={{ ml: 1 }} /></Button>
-                        </Box>
-                    </Box>
+            <Welcome />
+            <Hr />
+            <Box display="flex" justifyContent="center" alignItems="center">
+                <Box>
+                    <Typography variant="h2" style={{ color: 'white' }}>Veja a Netflix no seu televisor.</Typography>
+                    <Typography variant="h4" style={{ color: 'white' }}>Smart TVs, Playstation, Xbox, Chromecast,</Typography>
+                    <Typography variant="h4" style={{ color: 'white' }}>Apple TV, leitores de Blu-ray e muito mais.</Typography>
                 </Box>
-            </Box>
-            <Box style={{ width: "100%", height: 10, background: 'red' }}>
-
+                <Box>
+                    <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" style={{ zIndex: 1, width: 530.19, height: 397.64 }} />
+                    <video style={{ position: "absolute", top: "130%", left: "62%", width: 395.09, height: 216.8 }}>
+                        <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4" />
+                    </video>
+                </Box>
             </Box>
         </React.Fragment>
     );

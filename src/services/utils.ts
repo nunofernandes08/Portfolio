@@ -1,4 +1,4 @@
-import { Music, Languages } from "../types"
+import { Music, Languages, Paths } from "../types"
 
 export function navigate(path: string) {
     const location = `${path}`
@@ -57,5 +57,16 @@ export const findLanguageValue = (language: string) => {
             return Languages.de
         case Languages.ES:
             return Languages.es
+    }
+}
+
+export const backgroundColor = (path: string) => {
+    switch (path) {
+        case Paths.SPOTIFY:
+            return '#121212'
+        case Paths.NETFLIX:
+            return '#000'
+        default:
+            return "#fff"
     }
 }

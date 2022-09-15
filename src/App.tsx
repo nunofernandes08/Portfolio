@@ -29,7 +29,7 @@ import {
 import { Paths } from "./types";
 import * as robot from "./assets/robot.json";
 import AppMediaPlayer from "./components/app-media-player";
-import { chooseMusic, slideFormat, timeFormat } from "./services/utils";
+import { backgroundColor, chooseMusic, slideFormat, timeFormat } from "./services/utils";
 
 import DisclaimerDialog from "./components/disclaimer-dialog";
 
@@ -157,7 +157,7 @@ export default function App() {
           justifyContent="center"
           alignItems="center"
           style={{
-            background: currentPath === Paths.SPOTIFY ? '#121212' : themeColors.background,
+            background: backgroundColor(currentPath),
           }}
         >
           <Routes>
