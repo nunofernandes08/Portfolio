@@ -23,9 +23,6 @@ import {
   setupTheme,
   setupI18n,
 } from "./core/general-setup";
-import {
-  themeColors,
-} from "./style/common";
 import { Paths } from "./types";
 import * as robot from "./assets/robot.json";
 import AppMediaPlayer from "./components/app-media-player";

@@ -245,5 +245,8 @@ export const netflixComponents = makeStyles((theme: Theme) => ({
     },
     netflixSelectIcon: {
         fill: 'white'
-    }
+    },
+    netflixSelectIconFooter: {
+        fill: '#737373'
+    },
 }));

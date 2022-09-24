@@ -86,3 +86,8 @@ export enum Languages {
     ES = "ES",
     es = "es"
 }
+
+export enum PositionContainer {
+    LEFT = "left",
+    RIGHT = "right"
+}
