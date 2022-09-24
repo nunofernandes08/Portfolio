@@ -85,7 +85,7 @@ export const backgroundColor = (path: string) => {
 
 export const router = (navigate: Function, currentPath: string) => {
     const pathIndex = availablePaths.findIndex(item => item === currentPath)
-    if (currentPath === "/" || currentPath === "/Portfolio/") {
+    if (currentPath === "/" || currentPath === "/Portfolio/" || currentPath === "") {
         return navigate("/home")
     }
     if (pathIndex === -1) {
