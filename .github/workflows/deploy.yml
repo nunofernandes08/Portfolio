@@ -9,7 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: ci-${{github.ref}}
     steps:
-      - name: Install 
-        run: |
-          npm run predeploy
-          npm run build
+    
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        
+    - name: Install 
+      run: |
+        npm install
+        npm run predeploy
+        npm run build
