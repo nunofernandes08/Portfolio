@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: ci-${{github.ref}}
     steps:
+
+    - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
     
     - name: Setup Node
       uses: actions/setup-node@v1
