@@ -69,7 +69,7 @@ export default function Welcome() {
             alt=""
             style={{ borderColor: themeColors.background }}
           />
-          <Typography variant="h4">Nuno Fernandessaksjdhalksjdlka</Typography>
+          <Typography variant="h4">Nuno Fernandes</Typography>
           <Box className={welcomeComponentClass.social}>
             {socialImages.map((sI: SocialImage, index: number) => {
               return (
