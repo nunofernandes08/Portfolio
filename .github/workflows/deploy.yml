@@ -22,5 +22,13 @@ jobs:
         
     - name: Install 
       run: |
+        npm install
+        
+    - name: Predeploy
+      run: |
         npm run predeploy
-        npm run build
+        
+    - name: Deploy
+      run: |
+        npm run deploy
+        
