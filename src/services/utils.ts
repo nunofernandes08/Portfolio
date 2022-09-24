@@ -10,7 +10,7 @@ import * as linkedin from "../assets/projects/linkedin.json";
 
 import { Projects } from "../types";
 
-const availablePaths = ["/spotify", "/netflix", "/home"]
+const availablePaths = ["/spotify", "/netflix", "/home", "/Portfolio", "/", ""]
 
 export function navigate(path: string) {
     const location = `${path}`
