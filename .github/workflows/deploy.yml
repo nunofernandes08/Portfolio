@@ -23,6 +23,8 @@ jobs:
     - name: Install 
       run: |
         npm install
+        npm i -D jest-worker@27.3.1
+        node --max_old_space_size=2768 node_modules/webpack-cli/bin/cli.js --mode production
         
     - name: Predeploy
       run: |
