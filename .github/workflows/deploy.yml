@@ -11,6 +11,5 @@ jobs:
     steps:
       - name: Install 
         run: |
-          npm ci
           npm run predeploy
           npm run build
