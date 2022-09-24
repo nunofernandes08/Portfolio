@@ -61,7 +61,9 @@ export interface LanguageItem {
 
 export enum Paths {
     SPOTIFY = "/spotify",
-    NETFLIX = "/netflix"
+    NETFLIX = "/netflix",
+    ERROR404 = "/404",
+    HOME = "/home"
 }
 
 export enum Projects {
@@ -91,3 +93,9 @@ export enum PositionContainer {
     LEFT = "left",
     RIGHT = "right"
 }
+
+export enum HomeComponents {
+    APPMEDIAPLAYER = "appmediaplayer",
+    LOTTIE = "lottie",
+    DIALOG = "dialog"
+}   

@@ -1,4 +1,16 @@
-import { Music, Languages, Paths } from "../types"
+import { Music, Languages, Paths, HomeComponents } from "../types"
+
+import * as spotify from "../assets/projects/spotify.json";
+import * as netflix from "../assets/projects/netflix.json";
+import * as amazon from "../assets/projects/amazon.json";
+import * as youtube from "../assets/projects/youtube.json";
+import * as reddit from "../assets/projects/reddit.json";
+import * as facebook from "../assets/projects/facebook.json";
+import * as linkedin from "../assets/projects/linkedin.json";
+
+import { Projects } from "../types";
+
+const availablePaths = ["/spotify", "/netflix", "/home"]
 
 export function navigate(path: string) {
     const location = `${path}`
@@ -68,5 +80,71 @@ export const backgroundColor = (path: string) => {
             return '#000'
         default:
             return "#fff"
+    }
+}
+
+export const router = (navigate: Function, currentPath: string) => {
+    const pathIndex = availablePaths.findIndex(item => item === currentPath)
+    if (currentPath === "/") {
+        return navigate("/home")
+    }
+    if (pathIndex === -1) {
+        navigate("/404")
+    }
+}
+
+export const allowComponents = (component: string, currentPath: string, showBot: boolean) => {
+    switch (component) {
+        case HomeComponents.APPMEDIAPLAYER:
+            return !showBot && currentPath === Paths.HOME
+        case HomeComponents.LOTTIE:
+            return showBot && currentPath === Paths.HOME;
+        case HomeComponents.DIALOG:
+            return currentPath !== Paths.NETFLIX && currentPath !== Paths.ERROR404
+    }
+}
+
+export const findLogoAndName = (title: string) => {
+    switch (title) {
+        case Projects.SPOTIFY:
+            return {
+                logo: spotify,
+                name: Projects.SPOTIFY
+            };
+        case Projects.NETFLIX:
+            return {
+                logo: netflix,
+                name: Projects.NETFLIX
+            };
+        case Projects.AMAZON:
+            return {
+                logo: amazon,
+                name: Projects.AMAZON
+            };
+        case Projects.YOUTUBE:
+            return {
+                logo: youtube,
+                name: Projects.YOUTUBE
+            };
+        case Projects.REDDIT:
+            return {
+                logo: reddit,
+                name: Projects.REDDIT
+            };
+        case Projects.FACEBOOK:
+            return {
+                logo: facebook,
+                name: Projects.FACEBOOK
+            };
+        case Projects.LINKEDIN:
+            return {
+                logo: linkedin,
+                name: Projects.LINKEDIN
+            };
+        default:
+            return {
+                logo: undefined,
+                name: ''
+            };
     }
 }

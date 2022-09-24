@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import {
   Routes,
   Route,
-  Navigate,
   useLocation
 } from "react-router-dom";
 import Lottie from "react-lottie";
 import { Howl } from 'howler';
 import { useStopwatch } from 'react-timer-hook';
+import { useNavigate } from 'react-router-dom';
 
 import {
   Box
@@ -23,14 +23,15 @@ import {
   setupTheme,
   setupI18n,
 } from "./core/general-setup";
-import { Paths } from "./types";
+import { HomeComponents } from "./types";
 import * as robot from "./assets/robot.json";
 import AppMediaPlayer from "./components/app-media-player";
-import { backgroundColor, chooseMusic, slideFormat, timeFormat } from "./services/utils";
+import { allowComponents, backgroundColor, chooseMusic, router, slideFormat, timeFormat } from "./services/utils";
 
 import DisclaimerDialog from "./components/disclaimer-dialog";
 
 import "./App.css";
+import Error404 from "./containers/404";
 
 setupI18n();
 const theme = setupTheme();
@@ -61,6 +62,9 @@ export default function App() {
   const slideValue = slideFormat(count, started, music)
 
   const location = useLocation();
+
+  const navigate = useNavigate()
+
   const currentPath = location.pathname
 
   const defaultOptions = {
@@ -129,6 +133,10 @@ export default function App() {
     setOpenDialog(false);
   };
 
+  const pathNavigate = (path: string) => {
+    navigate(path)
+  }
+
   if (slideValue === 100) {
     stopMusic();
   };
@@ -143,6 +151,11 @@ export default function App() {
       setShowBot(false);
     }, 5000);
   }, []);
+
+  useEffect(() => {
+    router(pathNavigate, currentPath)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPath])
 
 
   return (
@@ -178,17 +191,17 @@ export default function App() {
             } />
             <Route path="/netflix" element={<Netflix />} />
             <Route path="/photography" element={<Photography />} />
-            <Route path="*" element={<Navigate to="/home" replace />} />
+            <Route path="/404" element={<Error404 />} />
           </Routes>
         </Box>
 
-        {showBot && currentPath !== Paths.SPOTIFY && currentPath !== Paths.NETFLIX && (
+        {allowComponents(HomeComponents.LOTTIE, currentPath, showBot) && (
           <Box style={{ position: "fixed", bottom: 20, right: 0 }}>
             <Lottie options={defaultOptions} height={200} width={200} />
           </Box>
         )}
 
-        {!showBot && currentPath !== Paths.SPOTIFY && currentPath !== Paths.NETFLIX && music.artist && (
+        {allowComponents(HomeComponents.APPMEDIAPLAYER, currentPath, showBot) && music.artist && (
           <Box style={{ position: "fixed", bottom: 20, right: 20 }}>
             <AppMediaPlayer
               playMusic={playMusic}
@@ -202,7 +215,9 @@ export default function App() {
           </Box>
         )}
 
-        <DisclaimerDialog isOpen={openDialog} handleClose={handleCloseDialog} />
+        {allowComponents(HomeComponents.DIALOG, currentPath, showBot) && (
+          <DisclaimerDialog isOpen={openDialog} handleClose={handleCloseDialog} />
+        )}
       </ThemeProvider>
     </StyledEngineProvider>
   );

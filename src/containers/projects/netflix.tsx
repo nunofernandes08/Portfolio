@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Welcome from "../../components/projects/netflix/welcome";
 import Hr from "../../components/projects/netflix/hr"
@@ -12,6 +12,10 @@ import { PositionContainer } from "../../types";
 import Footer from "../../components/projects/netflix/footer";
 
 export default function Netflix() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <React.Fragment>
             <Welcome />

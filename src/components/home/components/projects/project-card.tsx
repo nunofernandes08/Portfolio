@@ -4,65 +4,12 @@ import { useNavigate } from 'react-router-dom';
 
 import { Box, Typography } from "@mui/material";
 
-import * as spotify from "../../../../assets/projects/spotify.json";
-import * as netflix from "../../../../assets/projects/netflix.json";
-import * as amazon from "../../../../assets/projects/amazon.json";
-import * as youtube from "../../../../assets/projects/youtube.json";
-import * as reddit from "../../../../assets/projects/reddit.json";
-import * as facebook from "../../../../assets/projects/facebook.json";
-import * as linkedin from "../../../../assets/projects/linkedin.json";
-
-import { Projects } from "../../../../types";
+import { findLogoAndName } from "../../../../services/utils";
 
 import "../projects/cards.css"
 
 export default function ProjectCard(props: { img: string, title: string, description: string, src: string, index: number, length: number }) {
     const navigate = useNavigate();
-
-    const findLogoAndName = (title: string) => {
-        switch (title) {
-            case Projects.SPOTIFY:
-                return {
-                    logo: spotify,
-                    name: Projects.SPOTIFY
-                };
-            case Projects.NETFLIX:
-                return {
-                    logo: netflix,
-                    name: Projects.NETFLIX
-                };
-            case Projects.AMAZON:
-                return {
-                    logo: amazon,
-                    name: Projects.AMAZON
-                };
-            case Projects.YOUTUBE:
-                return {
-                    logo: youtube,
-                    name: Projects.YOUTUBE
-                };
-            case Projects.REDDIT:
-                return {
-                    logo: reddit,
-                    name: Projects.REDDIT
-                };
-            case Projects.FACEBOOK:
-                return {
-                    logo: facebook,
-                    name: Projects.FACEBOOK
-                };
-            case Projects.LINKEDIN:
-                return {
-                    logo: linkedin,
-                    name: Projects.LINKEDIN
-                };
-            default:
-                return {
-                    logo: undefined,
-                    name: ''
-                };
-        }
-    }
 
     const defaultOptions = {
         loop: true,
