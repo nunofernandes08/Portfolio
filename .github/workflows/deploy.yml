@@ -12,10 +12,5 @@ jobs:
       - name: Install 
         run: |
           npm ci
+          npm run predeploy
           npm run build
-          
-      - name: Deploy 
-        with:
-          folder: build
-          branch: gh-pages
-          single-commit: true
