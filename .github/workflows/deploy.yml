@@ -22,6 +22,5 @@ jobs:
         
     - name: Install 
       run: |
-        npm install
         npm run predeploy
         npm run build
